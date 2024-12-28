@@ -27,3 +27,29 @@ for( x in array){
 for(x of array){
     console.log(x);
 }
+
+array.forEach((Element,index) => {
+    console.log(Element,index);
+});
+
+objT1 = {
+    Name : "Susan",
+    Study : "6th Grade",
+    Location : "Canada"
+};
+
+//for in loop to access objects
+for (var key in objT1){
+    value = objT1[key];
+    console.log(key,value);
+}
+
+//for each loop to access objects
+Object.keys(objT1).forEach((Element)=>{
+    console.log(Element, objT1[Element]);
+})
+
+//for of loop to access objects
+for (var ind of Object.keys(objT1)){
+    console.log(ind, objT1[ind]);
+}
