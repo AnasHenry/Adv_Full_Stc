@@ -1,24 +1,87 @@
+var likeflag = 0;
+var commentflag = 0;
+var shareflag = 0;
+var postflag = 0;
+
+
 async function likePost(){
-    var liked = new Promise((Lpost)=>{
-        Lpost("Post liked successfully");
+    var liked = new Promise((Lpost,ULpost)=>{
+        if(!likeflag){
+            Lpost("Post liked successfully");
+            likeflag = 1;
+        }else{
+            ULpost("Post unliked successfully");
+            likeflag = 0;
+        }
     })
     return liked;
 }
 
 async function CommentPost(){
-    var comment = new Promise((CTpost)=>{
-        CTpost("Comment posted successfully");
+    var comment = new Promise((CTpost,UCTpost)=>{
+        if(!commentflag){
+            CTpost("Commented post successfully");
+            commentflag = 1;
+        }else{
+            UCTpost("Comment deleted successfully");
+            commentflag = 0;
+        }
     })
     return comment;
 }
 
-async function createPost(){
-    var post = new Promise((Cpost)=>{
-        Cpost("Post created successfully");
+async function SharePost(){
+    var shared = new Promise((Spost,USpost)=>{
+        if(!shareflag){
+            Spost("Post shared successfully");
+            shareflag = 1;
+        }else{
+            USpost("Post unshared successfully");
+            shareflag = 0;
+        }
     })
-    var [posts,comment,like] = await Promise.all([post,CommentPost(),likePost()]); //without await error occurs
-    console.log(posts);
-    console.log(comment);
-    console.log(like);
+    return shared;
 }
-createPost();
+
+async function createPost(){
+    var post = new Promise((Cpost,Upost)=>{
+        if(!postflag){
+            Cpost("Post created successfully");
+            postflag = 1;
+        }else{
+            Upost("Post deleted successfully");
+            postflag = 0;
+        }
+    })
+    likePost().then((Smsg)=>{
+        console.log(Smsg);
+    }).catch(function(Fmsg){
+        console.log(Fmsg);
+    })
+
+    SharePost().then((Smsg)=>{
+        console.log(Smsg);
+    }).catch(function(Fmsg){
+        console.log(Fmsg);
+    })
+
+    CommentPost().then((Smsg)=>{
+        console.log(Smsg);
+    }).catch(function(Fmsg){
+        console.log(Fmsg);
+    })
+
+    return post;
+
+}
+createPost().then((Smsg)=>{
+    console.log(Smsg);
+}).catch(function(Fmsg){
+    console.log(Fmsg);
+})
+createPost().then((Smsg)=>{
+    console.log(Smsg);
+}).catch(function(Fmsg){
+    console.log(Fmsg);
+})
+//Implement share unshare unpost unlike uncomment.
