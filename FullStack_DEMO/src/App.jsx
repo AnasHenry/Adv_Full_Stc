@@ -4,20 +4,46 @@ import NavBar from "./Components/FunctionalComponents/NavBar";
 import About from "./Components/ClassComponents/About";
 import Contact from "./Components/FunctionalComponents/Contact";
 import Gallery from "./Components/FunctionalComponents/Gallery";
+import Footer from "./Components/FunctionalComponents/Footer";
+import EmptyOccupier from "./Components/FunctionalComponents/EmptyOccupier";
+import UseEffect from "./Components/FunctionalComponents/UseEffect";
+import Useffect2 from "./Components/FunctionalComponents/UseEffect2";
+import UseRef from "./Components/FunctionalComponents/UseRef";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import UseContext from "./Components/FunctionalComponents/UseContext";
+import UseRefNum from "./Components/FunctionalComponents/UseRefNumber";
+import UseEffectImages from "./Components/FunctionalComponents/UseEffectImages";
+import UseMeme from "./Components/FunctionalComponents/UseMemo";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-      <NavBar />
+        <NavBar />
         <Routes>
-          {/* <Route path='/' element={<NavBar />} /> */}
-          <Route path="/about" element={<About />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact contact='98765431' address='London, UK' email='one@gmail.com' />} />
-          <Route path="/home" element={<DefaultUse />} />
+          <Route path='/' element={<EmptyOccupier />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/gallery' element={<Gallery />} />
+          <Route
+            path='/contact'
+            element={
+              <Contact
+                contact='98765431'
+                address='London, UK'
+                email='one@gmail.com'
+              />
+            }
+          />
+          <Route path='/home' element={<DefaultUse />} />
+          <Route path='/effect' element={<UseEffect />} />
+          <Route path='/effect2' element={<Useffect2 />} />
+          <Route path='/ref' element={<UseRef />} />
+          <Route path='/context' element={<UseContext />} />
+          <Route path='/refnum' element={<UseRefNum />} />
+          <Route path="/imgeffect" element={< UseEffectImages/>} />
+          <Route path="/memo" element={<UseMeme/>}/>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

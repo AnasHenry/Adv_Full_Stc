@@ -1,6 +1,6 @@
 import React from "react";
-import "./../../assets/NavBar.css"
-const footer = () =>{
+import "./../../assets/NavBar.css";
+const Footer = () =>{
     return(
         <div className="footer-box">
             <div>
@@ -30,4 +30,4 @@ const footer = () =>{
     )
 }
 
-export default footer;
+export default Footer;

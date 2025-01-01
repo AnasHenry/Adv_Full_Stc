@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./../../assets/NavBar.css"
 
 function Gallery() {
   var [counter, setcount] = useState(0);
@@ -13,7 +14,7 @@ function Gallery() {
     setcount(counter = 0);
   }
   return (
-    <div>
+    <div className="mt-box">
       <h1 style={{ textAlign: "center" }}>Hello.... this is Gallery page</h1>
       <p>The number of photos in this gallery is {counter}</p>
       <button onClick={increment}>+1</button>

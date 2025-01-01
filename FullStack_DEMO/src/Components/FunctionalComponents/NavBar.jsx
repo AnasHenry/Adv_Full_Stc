@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Footer from "./Footer.jsx";
 
 var NavBar = () => {
   return (
@@ -21,10 +20,6 @@ var NavBar = () => {
           </li>
         </ul>
       </nav>
-      <div className="mt-box">
-
-      </div>
-      <Footer />
     </header>
   );
 };
