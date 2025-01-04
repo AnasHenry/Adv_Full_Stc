@@ -6,7 +6,7 @@ var User = require('./models/users')
 const PORT = 3000
 app.use(express.json())
 
-mdb.connect("mongodb://localhost:27017/kongu").then(()=>{
+mdb.connect("mongodb://localhost:27017/").then(()=>{
     console.log("Mongodb Connection Successful")
 }).catch(()=>{
     console.log("Check your connection string")
