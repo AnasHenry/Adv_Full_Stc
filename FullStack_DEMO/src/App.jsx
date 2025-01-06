@@ -14,6 +14,9 @@ import UseContext from "./Components/FunctionalComponents/UseContext";
 import UseRefNum from "./Components/FunctionalComponents/UseRefNumber";
 import UseEffectImages from "./Components/FunctionalComponents/UseEffectImages";
 import UseMeme from "./Components/FunctionalComponents/UseMemo";
+import Login from "./Components/FunctionalComponents/Login";
+import SignUp from "./Components/FunctionalComponents/SignUp";
+import Land from "./Components/FunctionalComponents/Landing";
 
 function App() {
   return (
@@ -42,6 +45,9 @@ function App() {
           <Route path='/refnum' element={<UseRefNum />} />
           <Route path="/imgeffect" element={< UseEffectImages/>} />
           <Route path="/memo" element={<UseMeme/>}/>
+          <Route path="/login" element={<Login/>} />
+          <Route path="/signup" element={<SignUp/>} />
+          <Route path="/land" element={<Land />} />
         </Routes>
         <Footer />
       </BrowserRouter>

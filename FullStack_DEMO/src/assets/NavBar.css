@@ -48,3 +48,8 @@ li:hover {
   display: flex;
   justify-content: space-around;
 }
+
+.form-box{
+  padding: 10px;
+  
+}

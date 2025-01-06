@@ -18,6 +18,12 @@ var NavBar = () => {
           <li>
             <Link to={"/gallery"}>Gallery</Link>
           </li>
+          <li>
+            <Link to={"/login"}>Login</Link>
+          </li>
+          <li>
+            <Link to={"/signup"}>Sign Up</Link>
+          </li>
         </ul>
       </nav>
     </header>
