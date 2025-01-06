@@ -14,7 +14,7 @@ var SignUp = () => {
   var signup = async (event) => {
     event.preventDefault();
     var req = axios
-      .post("http://localhost:3000/signup", {
+      .post("https://adv-full-stc.onrender.com/signup", {
         firstName: FName,
         lastName: LName,
         email: email,
