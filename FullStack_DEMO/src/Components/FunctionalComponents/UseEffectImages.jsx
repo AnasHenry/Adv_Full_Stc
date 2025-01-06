@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import "../../assets/NavBar.css";
 
 const UseEffectImages = () => {
   var [pics, setPics] = useState([]);
@@ -15,7 +16,7 @@ const UseEffectImages = () => {
   }, [pics]);
 
   return (
-    <section>
+    <section className="mt-box">
       <h1>Images obtained from API using UseEffect</h1>
       {pics.map((element)=>{
         return <img key={element.id} src={element.url} width={40} height={40}></img>

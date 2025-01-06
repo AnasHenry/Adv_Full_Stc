@@ -14,7 +14,7 @@ const UseMeme = () => {
     return slowfn(num);
   }, [num]);
   return (
-    <div>
+    <div className="mt-box">
       <h1>This is useMemo Example</h1>
       <p>
         It can be used to keep expensive, resource intensive functions from

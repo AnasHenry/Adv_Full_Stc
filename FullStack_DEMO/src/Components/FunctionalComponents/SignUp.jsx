@@ -26,50 +26,52 @@ var SignUp = () => {
     navigate("/login");
   };
   return (
-    <div className='form-box'>
-      <form onSubmit={signup}>
-        <label htmlFor='Fname'>First Name: </label>
-        <input
-          type='text'
-          id='FName'
-          placeholder='Enter your First name'
-          onChange={(e) => {
-            SetFName(e.target.value);
-          }}
-        />
-        <br />
-        <label htmlFor='Lname'>Last Name: </label>
-        <input
-          type='text'
-          id='LName'
-          placeholder='Enter your Last name'
-          onChange={(e) => {
-            SetLName(e.target.value);
-          }}
-        />
-        <br />
-        <label htmlFor='email'>Email: </label>
-        <input
-          type='email'
-          id='email'
-          placeholder='Enter your Email'
-          onChange={(e) => {
-            SetEmail(e.target.value);
-          }}
-        />
-        <br />
-        <label htmlFor='pass'>Password: </label>
-        <input
-          type='password'
-          id='pass'
-          placeholder='Enter your password'
-          onChange={(e) => {
-            SetPassword(e.target.value);
-          }}
-        />
-        <br />
-        <button type='submit'>Submit </button>
-      </form>
+    <div className='mt-box'>
+      <div className='form-box'>
+        <form onSubmit={signup}>
+          <label htmlFor='Fname'>First Name: </label>
+          <input
+            type='text'
+            id='FName'
+            placeholder='Enter your First name'
+            onChange={(e) => {
+              SetFName(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor='Lname'>Last Name: </label>
+          <input
+            type='text'
+            id='LName'
+            placeholder='Enter your Last name'
+            onChange={(e) => {
+              SetLName(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor='email'>Email: </label>
+          <input
+            type='email'
+            id='email'
+            placeholder='Enter your Email'
+            onChange={(e) => {
+              SetEmail(e.target.value);
+            }}
+          />
+          <br />
+          <label htmlFor='pass'>Password: </label>
+          <input
+            type='password'
+            id='pass'
+            placeholder='Enter your password'
+            onChange={(e) => {
+              SetPassword(e.target.value);
+            }}
+          />
+          <br />
+          <button type='submit'>Submit </button>
+        </form>
+      </div>
     </div>
   );
 };

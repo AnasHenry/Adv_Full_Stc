@@ -17,7 +17,7 @@ const UseRefNum = () =>{
         prevCount.current = count;
     },[count])
     return(
-        <div>
+        <div className="mt-box">
             <h1>UseRefNumber Task</h1>
             <button type="button" onClick={(increment)}>+1</button>
             <button type="button" onClick={(decrement)}>-1</button>

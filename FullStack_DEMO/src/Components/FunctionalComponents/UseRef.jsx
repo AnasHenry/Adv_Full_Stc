@@ -9,7 +9,7 @@ const UseRef = () => {
     prevText.current = text
   },[text])
   return (
-    <div>
+    <div className="mt-box">
       <h1 className="heading">UseRef</h1>
       <h4>UseRef is used for referencing</h4>
       <h4>Goes like UseStaff UseRef UseEffect</h4>

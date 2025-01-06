@@ -17,8 +17,8 @@ var Login = () => {
       })
       .then((res) => {
         console.log(res.data.message);
-        localStorage.setItem('user',res.data.user);
-        if(res.data.isLoggedIn){
+        localStorage.setItem("user", res.data.user);
+        if (res.data.isLoggedIn) {
           navigate("/land");
         }
       })
@@ -30,29 +30,31 @@ var Login = () => {
     navigate("/signup");
   };
   return (
-    <div className='form-box' onSubmit={login}>
-      <form>
-        <label htmlFor='email'>Email: </label>
-        <input
-          type='text'
-          id='email'
-          onChange={(e) => SetEmail(e.target.value)}
-        />
-        <br />
-        <label htmlFor='pass'>Password: </label>
-        <input
-          type='password'
-          id='pass'
-          onChange={(e) => SetPassword(e.target.value)}
-        />
-        <br />
-        <button type='submit' value='Submit'>
-          Login
+    <div className='mt-box'>
+      <div className="form-box">
+        <form onSubmit={login}>
+          <label htmlFor='email'>Email: </label>
+          <input
+            type='text'
+            id='email'
+            onChange={(e) => SetEmail(e.target.value)}
+          />
+          <br />
+          <label htmlFor='pass'>Password: </label>
+          <input
+            type='password'
+            id='pass'
+            onChange={(e) => SetPassword(e.target.value)}
+          />
+          <br />
+          <button type='submit' value='Submit'>
+            Login
+          </button>
+        </form>
+        <button type='button' onClick={navi}>
+          Click here to register a New User!
         </button>
-      </form>
-      <button type='button' onClick={navi}>
-        Click here to register a New User!
-      </button>
+      </div>
     </div>
   );
 };

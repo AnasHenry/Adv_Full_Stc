@@ -1,8 +1,9 @@
 import React from "react";
+import "./../../assets/NavBar.css";
 
 function Home() {
   return (
-    <div>
+    <div className="mt-box">
       <h1>This is a Home page.</h1>
       <br></br>
       <h3>Props</h3>
